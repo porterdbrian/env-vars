@@ -1,6 +1,8 @@
 # Use NodeJS base image
 FROM node:13
 
+ENV NAME=${NAME}
+
 # Create app directory
 WORKDIR /usr/src/app
 
