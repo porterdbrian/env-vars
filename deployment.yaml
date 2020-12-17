@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env-vars
+  labels:
+    app: env-vars
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: env-vars
+  template:
+    metadata:
+      labels:
+        app: env-vars
+    spec:
+      containers:
+      - name: env-vars
+        image: porterdb/env_vars
+        ports:
+        - containerPort: 80

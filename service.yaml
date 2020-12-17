@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: env-vars
+  labels:
+    run: env-vars
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: env-vars
